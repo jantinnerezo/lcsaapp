@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title color="white">
+     	 LCSA App 
+    </ion-title>
+     <ion-buttons end>
+      <button  *ngIf="username" ion-button icon-right color="white" (click)="checker_options()">
+        {{username}} <ion-icon name="arrow-dropdown"></ion-icon> 
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-grid [hidden]="empty == false">
+    <ion-row>
+      <ion-col text-center>
+        <p color="label"> Currently no attendance added </p>
+        <button ion-button icon-left color="primary" (click)="add_attendance()">
+        <ion-icon name="add"></ion-icon>  Add  </button> 
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+   <div [hidden]="empty == true">
+    <div *ngFor="let attendance of attendance_list"  class="list-frame" >
+         <h4> {{attendance.title}}   </h4>
+         <p > Created on : {{attendance.created_time}}</p>
+         <p > Added by: {{attendance.added_by}} </p>
+         <p > Type: {{class.room}} </p>
+    </div>
+   </div>
+
+
+   <ion-grid [hidden]="no_connection == false">
+    <ion-row>
+      <ion-col text-center>
+        <p color="label"> Not connected to server </p>
+        <button ion-button icon-left color="primary" (click)="add_attendance()">
+        <ion-icon name="refresh"></ion-icon>  Retry  </button> 
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+  <ion-footer>
+      <div text-center>
+        <p> &copy; Developed by: Jan Erezo | SilentRoom  </p>
+      </div>
+  </ion-footer>
+</ion-content>

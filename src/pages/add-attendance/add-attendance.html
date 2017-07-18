@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title >
+     	 New attendance
+    </ion-title>
+     <ion-buttons end>
+      <button  ion-button icon-only (click)="close()">
+        <ion-icon name="close"></ion-icon> 
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	 <form (ngSubmit)="add()">
+	   <ion-list >
+
+		 <ion-item>
+		    <ion-label floating>Title</ion-label>
+		    <ion-input [(ngModel)]="title" [ngModelOptions]="{standalone: true}" type="text"></ion-input>
+		 </ion-item>
+
+		  <ion-item>
+		    <ion-label floating>Description</ion-label>
+		    <ion-input [(ngModel)]="description" [ngModelOptions]="{standalone: true}" type="text"></ion-input>
+		  </ion-item>
+
+		<ion-item>
+		    <ion-label floating>Type</ion-label>
+		    <ion-select [(ngModel)]="type" [ngModelOptions]="{standalone: true}">
+		      <ion-option value="1">Typical</ion-option>
+		      <ion-option value="2">Sign-in</ion-option>
+		      <ion-option value="3">Sign-out</ion-option>
+		    </ion-select>
+	  	</ion-item>
+
+		</ion-list>
+
+		<button ion-button type="submit" block color="primary">Submit</button>
+	</form>
+	
+
+</ion-content>

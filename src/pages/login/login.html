@@ -1,0 +1,57 @@
+
+<ion-content class="login-content">
+	
+	<div class="image-container">
+        <img src="assets/img/logo.png" class="login-image" >
+	 </div>
+	
+   	<div padding>
+   		<h2 color="primary" text-center>LCSA App</h2> 
+   		<p color="light-dark" text-center>Lourdes College Student Attendance Application</p> 
+   	</div>
+	<form #loginForm="ngForm" novalidate>
+		<div class="login-frame">
+			    <ion-list no-line class="login-list">
+					<ion-row responsive-sm>
+						<ion-col class="login-col">
+							<ion-item class="login-input">
+								<ion-input   [(ngModel)]="login.username" name="username" (change)="hideInvalid($event)" placeholder="Username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off" 
+									required>
+								</ion-input>
+							</ion-item>
+							</ion-col>
+						</ion-row>
+						<ion-row responsive-sm>
+						<ion-col class="login-col">
+							<ion-item class="login-input" >
+								<ion-input  [(ngModel)]="login.password" name="password"   (change)="hideInvalid($event)" placeholder="Password"  type="password" #password="ngModel" required>
+								</ion-input>
+							</ion-item>
+						</ion-col>
+					</ion-row>
+				</ion-list>
+		            
+		            <div class="invalid"  [hidden]="incorrect == false || submitted == false" color="danger">
+		                <p align="center" class="invalid-text" color="invalid">
+						Checker username and password is invalid, please try again.
+						</p>   
+		            </div>
+					
+				<ion-row >
+				       <div class="login-btn" (click)="onLogin(loginForm)">
+						<ion-icon color="white" name="log-in"> </ion-icon>  Login
+					 </div>
+				</ion-row>
+		        
+		</div>
+
+		
+	</form>
+
+  	<ion-footer class="login-footer">
+  		<div text-center>
+  			<p class="footer-text"> &copy; Developed by: Jan Erezo | SilentRoom  </p>
+  		</div>
+  	</ion-footer>
+
+</ion-content>

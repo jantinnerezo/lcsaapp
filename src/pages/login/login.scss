@@ -1,0 +1,149 @@
+
+    
+    .login-frame{
+        margin-left:20px;
+        margin-right:20px;
+    }
+    .login-content{
+        background-color:#ffffff;
+        align:center;
+        
+    }
+    .login-input {
+        background-color:#fff;
+        border-top: #cccccc; 
+       
+    }
+    .login-header {
+        background-color:transparent;
+    }
+
+    .image-container {
+      max-height: 100%;
+        max-width: 100%;
+        /* position: absolute; */
+        margin-top: 25%;
+        /* left: 50%; */
+        z-index: 10;
+        text-align: center;
+    }
+    .login-image {
+        max-width: 30%;
+        border: 0;
+    }
+    .login-content{
+
+
+    	 background-color:color($colors,light);
+
+         .ion-input::after {
+          border-bottom-color: transparent ;
+          }
+          .list {
+            margin-bottom: 0;
+          }
+        .invalid{
+            padding: 10px;
+		    text-align: center;
+		    border: 1px solid #f06292;
+		    background-color: #FFCDD2;
+		    margin-top: 10px;
+		    margin-bottom: 10px;
+        }
+        .invalid-text{
+
+        	color: #c62828;
+        }
+
+        
+         .login-list {
+            display: block;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            border: 1px solid #e0e0e0;
+
+            .login-col {
+                display: block;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                padding: 0; 
+                width: 100%;
+            }
+            .login-input .item-md {
+                position: relative;
+                padding-right: 0;
+                padding-left: 0; 
+                font-size: 1.6rem;
+                font-weight: normal;
+                text-transform: none;
+                color: #000;
+                background-color: #fff;
+                box-shadow: none;
+                transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .login-input .list-md .item-block .item-inner {
+                 border-bottom: 0 solid #dedede;
+              }
+             .login-input .item-md.item-block .item-inner {
+                 padding-right:0;
+                 border-bottom: 0px solid #dedede;
+              }
+            .login-input .item-inner {
+
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                overflow: hidden;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                -webkit-flex-direction: inherit;
+                -ms-flex-direction: inherit;
+                flex-direction: inherit;
+                -webkit-align-items: inherit;
+                -ms-flex-align: inherit;
+                align-items: inherit;
+                -webkit-align-self: stretch;
+                -ms-flex-item-align: stretch;
+                align-self: stretch;
+                margin: 0;
+                padding-left: 10px;
+                min-height: inherit;
+                border: 0;
+            }
+
+       }
+  
+       .login-btn{
+
+            background-color:color($colors, primary);
+            color: #fff;
+            width:100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: medium;
+            text-align: center;
+            border: 3px solid #EC407A;
+       }
+        .login-btn:active{
+
+           background-color:#d93b70;
+           border: 3px solid #d93b70;
+          
+       }
+
+       .login-footer{
+
+       		background-color: color($colors, white);
+       }
+       .footer-text{
+
+       		 color: #777777;
+       }
+       
+    }
+
+
+
